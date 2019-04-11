@@ -183,7 +183,7 @@ $ heroku git:remote -a estudo-my-money-backend-backend
 ### 9) Configurar as variáveis de ambiente que a aplicação **_backend_** usa.
 
 ```bash
-# URL_MONGO é mais ou menos assim: mongodb://<dbuser>:<dbpassword>@ds037215.mlab.com:37215/heroku_n8633ft5
+# URL_MONGO é mais ou menos assim: mongodb://<dbuser>:<dbpassword>@ds253889.mlab.com:53889/heroku_3t7bs45x
 $ heroku config:set MONGOLAB_URI=<URL_MONGO>
 
 # Gere o seu próprio AUTH_SECRET
