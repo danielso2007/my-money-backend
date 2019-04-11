@@ -1,0 +1,12 @@
+[Unit]
+Description=My money app backend
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+WorkingDirectory=/home/FASOLTI/daniel.oliveira/desenv/estudo_react_webpack/my-money-app
+Type=forking
+Restart=always
+ExecStart=/home/FASOLTI/daniel.oliveira/desenv/estudo_react_webpack/my-money-app nodemon
+KillMode=process
