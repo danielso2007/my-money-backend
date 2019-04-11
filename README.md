@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/danielso2007/my-money-app.svg?branch=master)](https://travis-ci.org/danielso2007/my-money-app)
+[![Build Status](https://travis-ci.org/danielso2007/my-money-backend.svg?branch=master)](https://travis-ci.org/danielso2007/my-money-backend)
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/danielso2007/my-money-app.svg)](https://github.com/danielso2007/my-money-app/pulls)
-[![GitHub issues](https://img.shields.io/github/issues/danielso2007/my-money-app.svg)](https://github.com/danielso2007/my-money-app/issues?q=is%3Aopen+is%3Aissue)
-![GitHub last commit](https://img.shields.io/github/last-commit/danielso2007/my-money-app.svg)
-![GitHub contributors](https://img.shields.io/github/contributors/danielso2007/my-money-app.svg)
-![GitHub top language](https://img.shields.io/github/languages/top/danielso2007/my-money-app.svg)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/danielso2007/my-money-backend.svg)](https://github.com/danielso2007/my-money-backend/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/danielso2007/my-money-backend.svg)](https://github.com/danielso2007/my-money-backend/issues?q=is%3Aopen+is%3Aissue)
+![GitHub last commit](https://img.shields.io/github/last-commit/danielso2007/my-money-backend.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/danielso2007/my-money-backend.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/danielso2007/my-money-backend.svg)
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
@@ -55,7 +55,7 @@ ps -ef | grep loader.js
 
 ## Rodando como serviço no linux
 
-- Crie um arquivo chamado `my-money-app-backend.service`
+- Crie um arquivo chamado `my-money-backend-backend.service`
 - Adicione o conteúdo abaixo:
 ```shell
 [Unit]
@@ -69,17 +69,17 @@ Description=My money app backend
 WantedBy=multi-user.target
 
 [Service]
-WorkingDirectory=/home/FASOLTI/daniel.oliveira/desenv/estudo_react_webpack/my-money-app
+WorkingDirectory=/home/FASOLTI/daniel.oliveira/desenv/estudo_react_webpack/my-money-backend
 Type=forking
 Restart=always
-ExecStart=/home/FASOLTI/daniel.oliveira/desenv/estudo_react_webpack/my-money-app nodemon
+ExecStart=/home/FASOLTI/daniel.oliveira/desenv/estudo_react_webpack/my-money-backend nodemon
 KillMode=process
 ```
 - Observe: backend/src/loader.js deve ter `#!/usr/bin/env node` na primeira linha
 - Copie seu arquivo de serviço para o `/etc/systemd/system`
-- Comece com `systemctl start my-money-app-backend`.
-- Ativá-lo para ser executado na inicialização com `systemctl enable my-money-app-backend`.
-- Veja os logs com `journalctl -u my-money-app-backend`
+- Comece com `systemctl start my-money-backend-backend`.
+- Ativá-lo para ser executado na inicialização com `systemctl enable my-money-backend-backend`.
+- Veja os logs com `journalctl -u my-money-backend-backend`
 
 ## Teste REST POSTMAN
 - POST
@@ -157,19 +157,19 @@ Logged in as <SEU E-MAIL>
 ### 4) Criar um projeto no Heroku via _Heroku CLI_
 
 ```bash
-$ heroku create estudo-my-money-app-backend
+$ heroku create estudo-my-money-backend-backend
 ```
 
 ### 5) Selecionar o buildpack para NodeJS
 
 ```bash
-$ heroku buildpacks:set heroku/nodejs -a estudo-my-money-app-backend
+$ heroku buildpacks:set heroku/nodejs -a estudo-my-money-backend-backend
 ```
 
 ### 6) Configurar o repositório remoto
 
 ```bash
-$ heroku git:remote -a estudo-my-money-app-backend
+$ heroku git:remote -a estudo-my-money-backend-backend
 ```
 
 ### 7) Adicionar o Add-on do **_mLab_** para termos uma instância do **_MongoDB_**
