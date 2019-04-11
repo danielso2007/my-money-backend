@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 // Usar os promises do Node
 mongoose.Promise = global.Promise;
 const url = process.env.MONGOLAB_URI ? process.env.MONGOLAB_URI : 'mongodb://localhost/mymoney';
+console.log('Acessando database: ', url);
 module.exports = mongoose.connect(url, { useNewUrlParser: true });
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório.";
